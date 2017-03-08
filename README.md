@@ -6,6 +6,7 @@
 ---
 
  ### Operation_Gamma
+
 > I'll just let others write this up, im lazy ***- Rohan***
 
 ### Contributors
@@ -60,8 +61,11 @@ second equal next) )
 Fibresult.(6).fibboonachi
 ```
 ### THEORY
-Some theory: () code resides in this automatically
-{} Returns object
+
+A preface to the theory, everything in this language is built on returning the object to the parent. So when you put multiple operaters between a , and a ``` ```, the operators dont matter and will be executed from back to the front. This also comes into postfix view of code operators, while math operands will still work the way they are designed to. Not many languages exist soley to move around parents and children and tag functions like this language. But one of the challenges and difficulties that we may face is the problem of memory management and how to allocate spaces for each function and returning objects. Objects still probably need more memory allocation before they are created and the language may supposedly take up more memory at runtime. 
+
+Some theory: () code resides in this automatically  ( Everything is automatically enclosed in this and this dignifies a pointer of sorts. When something is called between () it points at the location of the thing that is called instead of bringing that here. (Instance.))
+{} Returns object 
 ; Applies to previous object
 Here is what I have so far:
 ```
@@ -77,9 +81,9 @@ but if you add a contstructor
 ```
 Y.(6).square // the .square returns (36) to the 6 property of Y
 ```
-so everything binds to each other and can be used independtly
+Everything binds to each other and can be used independantly
 
-so ```Y.(6).constructor returns .square```
+Which would make this ```Y.(6).constructor returns .square``` applicable. 
 
 to declare functions you use in  //input
 ```
@@ -109,6 +113,18 @@ Y.(7,6).randomFunctionName //13
 ### Transliteration
 And it would transliterate as 
 Variable Y of (7 6) of method randomFunctionName
+
+The purpose of transliteration to english is the purpose of coffeescript to javascript. You can code really highlevel stuff while in psuedo-english whereas you can dig deeper into the code with real symbols and code. The point of this is to intstantiate an easier way to read a language and debug it ( even for the compiler) with a psuedo-english frontface. Another example of tranliteration for the language would be 
+```
+. = Of
+ _ = to 
+ , = Chain (useless)( don't really need it unless it's useful) ( ) 
+ {} = Conditional 
+ = = Equal  
+ ; = ApplyX.(2,3).add //x=5  
+```
+this right here. These codes translate to psuedo-english and will definetly help with using and understanding the language. 
+
 ![](https://img.clipartfest.com/e69c9ee61e517b2d787996e40068fa5a_gallup-report-finds-coding-to-coding_600-399.jpeg)
 ```
 and lets put it on git so we could have as much supporters as we can

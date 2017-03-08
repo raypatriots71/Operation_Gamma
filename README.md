@@ -64,9 +64,9 @@ Fibresult.(6).fibboonachi
 
 A preface to the theory, everything in this language is built on returning the object to the parent. So when you put multiple operaters between a , and a ``` ```, the operators dont matter and will be executed from back to the front. This also comes into postfix view of code operators, while math operands will still work the way they are designed to. Not many languages exist soley to move around parents and children and tag functions like this language. But one of the challenges and difficulties that we may face is the problem of memory management and how to allocate spaces for each function and returning objects. Objects still probably need more memory allocation before they are created and the language may supposedly take up more memory at runtime. 
 
-Some theory: () code resides in this automatically  ( Everything is automatically enclosed in this and this dignifies a pointer of sorts. When something is called between () it points at the location of the thing that is called instead of bringing that here. (Instance.))
-{} Returns object 
-; Applies to previous object
+Some theory:``` () ```code resides in this automatically  ( Everything is automatically enclosed in this and this dignifies a pointer of sorts. When something is called between () it points at the location of the thing that is called instead of bringing that here. (Instance.))
+```{} Returns object 
+; Applies to previous object```
 Here is what I have so far:
 ```
 { condtional } ( true statement ) ;().construct( falsestatement)

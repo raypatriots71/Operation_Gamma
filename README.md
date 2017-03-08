@@ -81,7 +81,7 @@ Y.6 F.{ [ 0 to 3 ] }(y.(y).sqare) //F= 2,821,109,907,456
 
 
 
-
+```
 //Fibbonachi
 
 In fibbonachi(length).construct( 
@@ -99,7 +99,7 @@ first equal second
 second equal next) 
 
 )
-
+```
 
 
 
@@ -211,15 +211,15 @@ so yeah
 
 how do you want to get started on the language
 
-and lets put it on git so we could have as much supporters as we can
+
   
-![](https://files.slack.com/files-pri/T02SY1UGK-F02UKR9HH/61fecdffjw1em2euxugtdg208w06okjm.gif)
+![](https://img.clipartfest.com/e69c9ee61e517b2d787996e40068fa5a_gallup-report-finds-coding-to-coding_600-399.jpeg)
   
 
 
   
 ```
-A code block is also supported by type 「```」 at line start and press SPACE.
+and lets put it on git so we could have as much supporters as we can
 ```
   
 For more, please checkout: [https://github.com/sofish/pen#readme](https://github.com/sofish/pen#readme)  

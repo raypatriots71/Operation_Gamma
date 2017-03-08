@@ -16,6 +16,7 @@
 *   amsraman - Aditya Sundaram
 *  amirkhanaursrk - Manav Majumdar
 *  ravitejaaechan - Raviteja Aechan
+*  themechanicdude - Jason Li
 ### Purpose
 To create a programming language in which everything is returnable.
 Heres what I have so far  ( might need some tweaking )

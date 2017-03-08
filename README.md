@@ -2,6 +2,12 @@
 I'll just let Manav write this up, im lazy
 
 Rohan
-Basics:
-This is a new programming language. The main purpose is for everything to be returnable. Code will be compiled.
--Kavin
+----------------Contributors-------------------
+  raypatriots71 - Rohan Ray
+  Kavar814 - Kavin M. Govindarajan
+  mjoy0210 - Joydeep Mukherjee
+  ACSarma - Arun C. Sarma
+  amsraman - Aditya Sundaram
+  amirkhanaursrk - Manav Majumdar
+----------------Purpose------------------------
+To create a programming language in which everything is returnable.

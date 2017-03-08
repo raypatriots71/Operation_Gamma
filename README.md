@@ -1,7 +1,6 @@
 # Operation_Gamma
-I'll just let Manav write this up, im lazy
-
-Rohan
+"I'll just let others write this up, im lazy"
+ - Rohan
 ----------------Contributors-------------------
   raypatriots71 - Rohan Ray
   Kavar814 - Kavin M. Govindarajan

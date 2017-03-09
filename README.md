@@ -41,7 +41,7 @@ Method.y.(X) //square
 Y.method.y.(X) //25
 Y.method.y.x //undefined
 ```
-### MORE COde
+### MORE CODE
 ```
 [A] //Meet true iterate 
 [0 to 3] // 0 false 1 false 2 false 3 true

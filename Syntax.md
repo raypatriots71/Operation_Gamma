@@ -1,5 +1,6 @@
-lib type; //import library 'type'
-lib io; //import ''input and output'
+use type; //import library 'type'
+use io; //import ''input and output'
+use math; //import math fns
 
 type_Int name = value;
 type_String name = "value";
@@ -27,17 +28,19 @@ else:
 
 for x to y x++:
     code;
-    
-    
+
+
 
 
 while [condition]:
     code;  
-    
+
 
 do:
     code;
 while[condition];
+
+switch[conditional](case1 code)(case2 code)(case3 code)
 
 -----math------
 add();

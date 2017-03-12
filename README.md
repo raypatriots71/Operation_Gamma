@@ -47,7 +47,12 @@ in functionOne().construct( inside method, variables and expressions can be used
 **Loops**
 
 Loops run only if they meet a conditional, which is defined as ```{ }```. Iterators are present inside of a conditional defined by ```[]```
-For loops: ``` {[ ]}
+
+For loops: ``` {[ ]} ``` Inside a for loop exists a``` _ //also equal 'to'``` ex: ```{[0 to 5]}``` would be ```for i = 0; i < 5; i++; ```
+
+While loops: ``` {[ ] < x}``` . You can iterate inside of the [].
+
+
 
 ### Translation
 
@@ -55,7 +60,7 @@ Hopefully, or not, the first thing you would notice is that this language has a 
 ```
 .					//of
 _					//to
-,					//and ( very important topic) ( can be ignored by translator ) ( also chaining )
+,					//and ( very important topic) ( can be ignored by translator ) ( also chaining ) ( and can be a space inside )
 {}					//Conditional
 =					//Equals ( used in certain cases inside of a ( ) )
 ;					//Apply
@@ -84,5 +89,83 @@ Y.(6).functionFoo // would return 6 to Y
 ```
 It fails in the aspect of ```.construct(6+a)``` being applied to a different function because it is declared anonymously. One potential solution to this would be to introduce tagging to constructs of functions such as ```@ construct(6+a).(#.randomID)```. In this case, the constructor would be declared globally yet the ID is placed under the function as it is a property of it. 
 
+### Example Code
 
+Finally we get to the part where you can simply just translate existing code to prove your point. I will use C++ as a reference.
+
+C++:
+```
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int a, b, total ;
+   
+   cout << "Input numbers to be added: " << endl;
+   cin >> a >> b ;
+   total = a + b ;
+   cout << "The sum is " << total << endl;
+   return 0;
+} 
+```
+S1:
+```
+Scope.#packageC.extend                    //adds the c wrapper library
+a, b, total
+(Numbers to be added).printf
+a.stdin b.stdin
+total.(a+b)
+(The sum is ).total.printf
+```
+C++:
+```
+#include <iostream>
+using namespace std;
+
+// AreaTriangle function prototype
+float AreaTriangle(float base, float height); 
+
+int main()
+{
+   float side, segmentHeight, hexagonArea;
+   float cosTheta = 0.866025;
+
+   cout << "Program to calculate the area of a hexagon" << endl;
+   cout << "Enter side of hexagon: ";
+   cin >> side;
+
+   // Base of triangle is equal to side, height is side*cos(30)
+   segmentHeight = side*cosTheta;
+
+   // Function returns area of segment. 6 segments for total area.
+   hexagonArea =  6.0 * AreaTriangle(side,segmentHeight);
+
+   cout << "Area of hexagon = " << hexagonArea << endl;
+   return 0;
+}
+
+// AreaTriangle function definition
+float AreaTriangle(float base, float height)
+{
+   float area;
+        
+   area = (base*height)/2.0;
+   return area;
+}
+```
+S1:
+```
+Scope.#packageC.extend
+side, segmentHeight, hexagonArea, costTheta.(0.866025)
+(Program to calculate the area of a hexagon).printf
+(Enter side of hexagon).printf
+side.stdin
+segmentHeight.(side*cosTheta)
+hexagonArea.(6(side segment).AreaTriangle)
+(Area of a hexagon).hexagonArea.printf
+in AreaTriangle( base, height).contstruct( 
+	(base*height)/2
+)
+```
 

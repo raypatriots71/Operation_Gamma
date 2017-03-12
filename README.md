@@ -1,224 +1,88 @@
-<<<<<<< HEAD
-# Operation_Gamma
+## Syntax Explained ( 1st proposal ) 
+Due to the hierarchical state of the language noted in the purpose, it is designed to return all sub-nodes to its parent nodes. This provides a different perspective to the way methods are constructed and used. 
 
-----------------Contributors-------------------
-  raypatriots71 - Rohan Ray
-  Kavar814 - Kavin M. Govindarajan
-  mjoy0210 - Joydeep Mukherjee
-  ACSarma - Arun C. Sarma
-  amsraman - Aditya Sundaram
-  amirkhanaursrk - Manav Majumdar
-  ravitejaaechan - Raviteja Aechan
-----------------Purpose------------------------
-To create a programming language in which everything is returnable.
-----------------Syntax-----------------
-There is another file for syntax: link to --> syntax.md
-Heres what I have so far  ( might need some tweaking )
+### Theory
 
-. = Of
-_ = to
-, = Chain (useless)( don't really need it unless it's useful) ( )
-{} = Conditional
-= = Equal
-; = Apply
+The chaining of methods and declarations in objects make the logic hard to implement, but would add multiple perspectives to the way things are done. Every parent object may have multiple child nodes. A child node may have multiple parents if they are tagged. A classical approach to objects in programming is a variable that has multiple properties that are named and declared, each having their own funcitons/methods. This can be achieved as ( see below Drawbacks ) putting the Object in place soley at the font of each statement. Lets use some code for the visual learners:
+```
+RandomObjectName.#property1.(6).randomFunction    // multiple inheritance
+RandomObjectName.#randomProperty2.(().property1).randomFunction2  // multiple inheritance
+RandomObjectName.#randomProperty2.(().property12).(#randomId.randomFunction23)  // our syntactical logic isnt here yet, but will be soon
+```
+The second example is where the language really shines. 
+And here is single inheritance:
+```
+RandomObejctName.(6).functionFoo     //RandomObjectName has only 1 child
+```
 
---------------mjoy0201, Kavar814 Syntax proposals--------------
-//Declaration of variables
-vector type_string name(size) =  value;
-array type-int name(size) = value;
-type_int
-//Declaration of Libraries
-lib type; // imports library 'type'
-lib io; // ipmorts library 'io'
-===============================================================
-X.(2,3).add //x=5
-=======
+The constructors can be moved around, so can the functions, so can the variable, and so can everything. But, everything on the heirchial scale has a type. A ```Type``` is the ultimate defining mechanism.  Everything has a type and they are declared by the content. Ex: ``` 6 ``` is a subset of ```Integers``` which is a subset of ```Array``` which is a subset of ```Type``` ```Variables```. Every declared ```Type``` in the scope of the program has different properties.  
 
-## Operation_Gamma
+### Basic Syntax
 
-**Futile efforts to build a programming language in which everything is returnable**
+The part that everyone's been waiting for, syntactical sugar explained. 
 
----
+**Rules**
 
- ### Operation_Gamma
->>>>>>> origin/master
+1. Every type, transport method, etc is chained together with a ```.``` This helps with flow and organization. 
+2. Variables are dynamic and are always accociated with objects. 
+3. Antyhing enclosed in ```( )``` is automatically returned to parent. 
+4. Operators and regex can exist inside ```( )```. 
+5. Spaces and Commas are the general delimiters.
 
-> I'll just let others write this up, im lazy ***- Rohan***
+**Variable Declaration**
 
-### Contributors
-*   raypatriots71 - Rohan Ray
-*   Kavar814 - Kavin M. Govindarajan
-*   mjoy0210 - Joydeep Mukherjee
-*   ACSarma - Arun C. Sarma
-*   amsraman - Aditya Sundaram
-*  amirkhanaursrk - Manav Majumdar
-*  ravitejaaechan - Raviteja Aechan
-### Purpose
-To create a programming language in which everything is returnable.
-Heres what I have so far  ( might need some tweaking )
+Hyperobject:    ```Initial object construct``` is declared at the beggining of a statement and is chained by commas. Ex:
 ```
-. = Of
- _ = to
- , = Chain (useless)( don't really need it unless it's useful) ( )
- {} = Conditional
- = = Equal  
- ; = ApplyX.(2,3).add //x=5  
+HyperObject1, HyperObject2           //all of these 'variables' are declared
 ```
-```
-In add(a,b).construct( a + b) //function
-In square(a).construct( a*a)
-In mult( a b).construct(a*b)  
-```
-### USAGE
-```
-Y.(X).Square //25
-Y.(X).Square,mult // err mult needs 2 terms  
-Method.y.(X) //square
-Y.method.y.(X) //25
-Y.method.y.x //undefined
-<<<<<<< HEAD
+They can be used in front of a statement as such: ``` HyperObject1.(1) //hyperobject is now set to 1```
 
-[A] //Meet true iterate
-=======
-```
-### MORE CODE
-```
-[A] //Meet true iterate
->>>>>>> origin/master
-[0 to 3] // 0 false 1 false 2 false 3 true
-{ [A] }( y.y.add) //loop a times within conditional []
-Y.6 F.{ [ 0 to 3 ] }(y.(y).sqare) //F= 2,821,109,907,456
-```
-### FIBBO
-```
-//Fibbonachi
-<<<<<<< HEAD
-In fibbonachi(length).construct(
-start.0,c,next, second.1,
-{ [0 to length] }(
-{c lessthan 1 }(next.c);().construct(
-next.(first second).add
-first equal second
-second equal next)
-)
+**Function Construction**
 
-=======
-In fibbonachi(length).construct(
-start.0,c,next, second.1,
-{ [0 to length] }(
-{c lessthan 1 }(next.c);().construct(
-next.(first second).add
-first equal second
-second equal next) )
->>>>>>> origin/master
-Fibresult.(6).fibboonachi
+A function is an object which is a collection of methods of which can be applied to hyperobjects or certain variables. Functions are preceded by the ```in | In | IN | iN ``` Statement(s). That signifies the chaining and creation of a constructor to an Object. 
 ```
-### THEORY
+in functionOne().construct( inside method, variables and expressions can be used) 
+```
 
-A preface to the theory, everything in this language is built on returning the object to the parent. So when you put multiple operaters between a , and a ``` ```, the operators dont matter and will be executed from back to the front. This also comes into postfix view of code operators, while math operands will still work the way they are designed to. Not many languages exist soley to move around parents and children and tag functions like this language. But one of the challenges and difficulties that we may face is the problem of memory management and how to allocate spaces for each function and returning objects. Objects still probably need more memory allocation before they are created and the language may supposedly take up more memory at runtime.
+**Loops**
 
-Some theory:``` () ```code resides in this automatically  ( Everything is automatically enclosed in this and this dignifies a pointer of sorts. When something is called between () it points at the location of the thing that is called instead of bringing that here. (Instance.))
-```{} Returns object
-; Applies to previous object```
-Here is what I have so far:
-```
-{ condtional } ( true statement ) ;().construct( falsestatement)
-<<<<<<< HEAD
-^^ if else
-yeah needs work
-so every variable is an object
-if its too confusing
-then just remember this
-it eliminates typecasting
-not like javascript
-that has typecasting
-but like Y.(HELLO WORLD) // y's (hello world) is of type value
-and Y.(8) would still exist as a property of Y
-sort of like everything is a tree
-to declare a variable
-=======
-```
-That is an  If Else statement and it definetly needs some work. Every variable found in it is an object. If its too confusing then just remember this it eliminates typecasting not like javascript that has typecasting
-but like
-```Y.(HELLO WORLD) // y's (hello world)``` is of type value and ```Y.(8)``` would still exist as a property of ```Y``` sort of like everything is a tree to declare a variable
-```
->>>>>>> origin/master
-Y.(6) //y is set to 6
-```
-but if you add a contstructor
-```
-Y.(6).square // the .square returns (36) to the 6 property of Y
-```
-Everything binds to each other and can be used independantly
+Loops run only if they meet a conditional, which is defined as ```{ }```. Iterators are present inside of a conditional defined by ```[]```
+For loops: ``` {[ ]}
 
-Which would make this ```Y.(6).constructor returns .square``` applicable.
+### Translation
 
-to declare functions you use in  //input
+Hopefully, or not, the first thing you would notice is that this language has a very particular way of doing things upwards which leads into direct translation to English to ease debugging and learning. It simply allows a new perspective into logic which may be explained in words and vice versa. Some of the proposed direct translations are ( but not yet completed )
 ```
-{ conditional }
-<<<<<<< HEAD
-[ from one number to another ( its a loop ) ]
-another thing is that the code can be written psuedo-english but still be back into a codable sort
-ex. Y.(8).square   // Y of (8) of square constructor
-the purpose of this programming language is to bind other languages together
-the other purpose is to add interoperability to oop parents and children
-=======
->>>>>>> origin/master
+.					//of
+_					//to
+,					//and ( very important topic) ( can be ignored by translator ) ( also chaining )
+{}					//Conditional
+=					//Equals ( used in certain cases inside of a ( ) )
+;					//Apply
+```
+So this may be a new concept, but it might as well help in understanding. Some of the concepts are not finished yet. For example:
+```
+X,
+in add(a, b).construct(a + b)
+X.(0, 6).add    //returns 6 to X
+```
+and translated would be 
+``` 
+X,
+in add( a and b ) of construct ( a + b )
+X of ( 9 and 6 ) of add     //returns 15 to X
+```
+Yes, the object literals need new definitions, but it is workable. 
 
-[ from one number to another ( its a loop ) ]
-```
-Another thing is that the code can be written psuedo-english but still be back into a codable sort
-```
-ex. Y.(8).square   // ``` Y of (8) of square constructor
-```
-### Other Purposes
-The purpose of this programming language is to bind other programming languages together. The other purpose of this language is to add interoperability to OOP and children using returned objects.
-```after writing all of that i realized that constructors are still enclosed in () so it would interfere with order of ops```
-And then theres the problem with javascript that i intend to fix   
-1. javascript cant compute big numbers
-2. javascript confuses async and sync
-<<<<<<< HEAD
-whatever
-here is how functions would be declared
-parent.(anything inside these is returned to the parent)
-so
-for functions
-in randomFunctionName( a, b).construct(a + b )
-it returns a + b to randomFunctionName method
-so
-Y.(7,6).randomFunctionName //13
-and it would translate as
-Variable Y of (7 6) of method randomFunctionName
-so yeah
-how do you want to get started on the language
-and lets put it on git so we could have as much supporters as we can
-=======
+### Drawbacks
 
-Here is how functions would be declared
-```parent.(anything inside these is returned to the parent)```
-so for functions:
-```in randomFunctionName( a, b).construct(a + b )```
-it returns ```a + b``` to randomFunctionName method
+With that in mind, and everything being a sub-class of something else ( ie a String being a subclass of an Array ), we run into a certain set of problems such as every function would have no choice but to be added as a constructor to an empty parent object. Here is a demonstration of that in this Syntax: 
+``` 
+Y,
+in functionFoo(a).construct(6+a) //returns 6+a to parent usage of functionFoo
+Y.(6).functionFoo // would return 6 to Y
 ```
-Y.(7,6).randomFunctionName //13
-```
-### Transliteration
-And it would transliterate as
-Variable Y of (7 6) of method randomFunctionName
+It fails in the aspect of ```.construct(6+a)``` being applied to a different function because it is declared anonymously. One potential solution to this would be to introduce tagging to constructs of functions such as ```@ construct(6+a).(#.randomID)```. In this case, the constructor would be declared globally yet the ID is placed under the function as it is a property of it. 
 
-The purpose of transliteration to english is the purpose of coffeescript to javascript. You can code really highlevel stuff while in psuedo-english whereas you can dig deeper into the code with real symbols and code. The point of this is to intstantiate an easier way to read a language and debug it ( even for the compiler) with a psuedo-english frontface. Another example of tranliteration for the language would be
-```
-. = Of
- _ = to
- , = Chain (useless)( don't really need it unless it's useful) ( )
- {} = Conditional
- = = Equal  
- ; = ApplyX.(2,3).add //x=5  
-```
-this right here. These codes translate to psuedo-english and will definetly help with using and understanding the language.
 
-![](https://img.clipartfest.com/e69c9ee61e517b2d787996e40068fa5a_gallup-report-finds-coding-to-coding_600-399.jpeg)
-```
-and lets put it on git so we could have as much supporters as we can
-```
->>>>>>> origin/master
+

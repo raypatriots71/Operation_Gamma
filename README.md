@@ -176,10 +176,6 @@ sample code for loops
 
 ```
 ({[0 to 5]}			.   											dot
-.											dot
-	//code							.         ..
-.
-
+then?
 ```
-
-??
+how do we write the body of the loops? otherwise, looks good. we can work on switch and stuff if you'd like

@@ -171,3 +171,15 @@ in AreaTriangle( base, height).contstruct(                          //its probab
 
 requests:
 sample code for loops
+
+### Loop Examples
+
+```
+({[0 to 5]}			.   											dot
+.											dot
+	//code							.         ..
+.
+
+```
+
+??

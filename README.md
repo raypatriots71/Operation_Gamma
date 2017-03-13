@@ -164,7 +164,7 @@ side.stdin
 segmentHeight.(side*cosTheta)
 hexagonArea.(6(side segment).AreaTriangle)
 (Area of a hexagon).hexagonArea.printf
-in AreaTriangle( base, height).contstruct(                          //so this is a fn? btw its probably construct not contstruct
+in AreaTriangle( base, height).contstruct(                          //its probably construct not contstruct
 	(base*height)/2
 )
 ```

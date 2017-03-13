@@ -112,10 +112,10 @@ int main()
 S1:
 ```
 Scope.#packageC.extend                    //adds the c wrapper library
-a, b, total
+a, b, total				//how does compiler know its a var and not wrong syntax?
 (Numbers to be added).printf
-a.stdin b.stdin
-total.(a+b)
+a.stdin b.stdin        			//maybe put this in 2 diff lines?
+total.(a+b)					// so dot means '=' and apply to fn and append and everything? k
 (The sum is ).total.printf
 ```
 C++:
@@ -156,16 +156,18 @@ float AreaTriangle(float base, float height)
 ```
 S1:
 ```
-Scope.#packageC.extend
-side, segmentHeight, hexagonArea, costTheta.(0.866025)
+Scope.#packageC.extend						//is packageC a thing or do we make it?
+side, segmentHeight, hexagonArea, costTheta.(0.866025)			//again, fix var declaration
 (Program to calculate the area of a hexagon).printf
 (Enter side of hexagon).printf
 side.stdin
 segmentHeight.(side*cosTheta)
 hexagonArea.(6(side segment).AreaTriangle)
 (Area of a hexagon).hexagonArea.printf
-in AreaTriangle( base, height).contstruct( 
+in AreaTriangle( base, height).contstruct(                          //so this is a fn? btw its probably construct not contstruct
 	(base*height)/2
 )
 ```
 
+requests:
+sample code for loops

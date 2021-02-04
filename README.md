@@ -1,224 +1,133 @@
-<<<<<<< HEAD
 # Operation_Gamma
 
-----------------Contributors-------------------
-  raypatriots71 - Rohan Ray
-  Kavar814 - Kavin M. Govindarajan
-  mjoy0210 - Joydeep Mukherjee
-  ACSarma - Arun C. Sarma
-  amsraman - Aditya Sundaram
-  amirkhanaursrk - Manav Majumdar
-  ravitejaaechan - Raviteja Aechan
-----------------Purpose------------------------
-To create a programming language in which everything is returnable.
-----------------Syntax-----------------
-There is another file for syntax: link to --> syntax.md
-Heres what I have so far  ( might need some tweaking )
-
-. = Of
-_ = to
-, = Chain (useless)( don't really need it unless it's useful) ( )
-{} = Conditional
-= = Equal
-; = Apply
-
---------------mjoy0201, Kavar814 Syntax proposals--------------
-//Declaration of variables
-vector type_string name(size) =  value;
-array type-int name(size) = value;
-type_int
-//Declaration of Libraries
-lib type; // imports library 'type'
-lib io; // ipmorts library 'io'
-===============================================================
-X.(2,3).add //x=5
-=======
-
-## Operation_Gamma
-
-**Futile efforts to build a programming language in which everything is returnable**
-
----
-
- ### Operation_Gamma
->>>>>>> origin/master
-
+#### **Futile efforts to build a programming language in which everything is returnable**
+[O_G] Programming Language, version 0.01
 > I'll just let others write this up, im lazy ***- Rohan***
-
 ### Contributors
-*   raypatriots71 - Rohan Ray
-*   Kavar814 - Kavin M. Govindarajan
-*   mjoy0210 - Joydeep Mukherjee
-*   ACSarma - Arun C. Sarma
-*   amsraman - Aditya Sundaram
+*  raypatriots71 - Rohan Ray
+*  Kavar814 - Kavin M. Govindarajan
+*  mjoy0210 - Joydeep Mukherjee
+*  ACSarma - Arun C. Sarma
+*  amsraman - Aditya Sundaram
 *  amirkhanaursrk - Manav Majumdar
 *  ravitejaaechan - Raviteja Aechan
 ### Purpose
-To create a programming language in which everything is returnable.
-Heres what I have so far  ( might need some tweaking )
+The world exists as an object. You are the physical existence of a prototype, with properties, and then an instance of that. You have your own methods, your own thoughts, your unique things that make you, YOU. The purpose of this programming language is to bind objects together and everything is maintained as an object. Everything is assumed to be returned, dynamic, and free-flowing.
+#### Theory
+To preface the theory, everything in this language is built on returning the object to the parent. Using multiple operators between a, and a ```,```, the operators are executed from right to left, but following math rules. This comes from the postfix view of operators, while math operands expect to work the way of classic order of operations. This language exists solley to map parents and children, and tag variables. Every line of functional code is kept within a ```()```, while anything outside after ```.``` are variable names of the objects above them. The property is then the variable. 
+
+### Basic Syntax
 ```
-. = Of
- _ = to
- , = Chain (useless)( don't really need it unless it's useful) ( )
- {} = Conditional
- = = Equal  
- ; = ApplyX.(2,3).add //x=5  
+/* comments */
+// inline comments
 ```
+##### Basic Operators
 ```
-In add(a,b).construct( a + b) //function
++ addition
+- subtraction
+% modulo
+/ division
+^ exponential
+
+. Of
+_ Function
+, Chaining
+{} Conditional
+= Equal  
+; Apply
+```
+##### If Else statement
+```
+{Conditional}(True Statement);().(False Statement)
+```
+##### Loops
+```
+For loop:
+[ *anything* to *anything* ](rest of the loop)
+[ declaration; ](rest of the loop)
+
+While loop:
+[*anything* < conditional](rest of the loop)
+```
+##### Declarative Keywords
+```
+In 
+    - function declaration
+_
+    - .constructor()
+    - constructor 
+; 
+    - {}() ; ()._() - TRUE ; FALSE
+    - override + apply to previous
+lib::
+    - library declaration and usage
+[meet true operator]
+    - if something is within [], it'll loop until true
+    - while loop vibes
+ret
+    - Return upwards on call
+        - can return constructor
+        - can return method
+del 
+	- Deletes a variable from a memory
+```
+
+### Basic Usage
+
+#### Variable Declaration Methods:
+##### Only for numerical literals
+```
+x.(1) is logically equivalent to x.1
+x.(1) Works as the first property of the x, ie x == now
+x.1 is the declarative of the first property of x
+```
+##### Variable Name Declaration
+```
+x.foo.1 <- x's variable foo maintains the value of 1
+x.(foo) auto defaults to string
+x.("foo") is still a string
+x.foo is not a string
+x."foo" will still be a string
+
+xx is its own variable
+
+del removes a variable from memory
+    - usage del xx
+```
+##### Function Usage
+```
+X.(2,3).add //x=5  
+In add(a,b).construct( a + b) //declaring an add function, as shown used above
 In square(a).construct( a*a)
 In mult( a b).construct(a*b)  
 ```
-### USAGE
+### Example Code
+###### If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
 ```
-Y.(X).Square //25
-Y.(X).Square,mult // err mult needs 2 terms  
-Method.y.(X) //square
-Y.method.y.(X) //25
-Y.method.y.x //undefined
-<<<<<<< HEAD
-
-[A] //Meet true iterate
-=======
-```
-### MORE CODE
-```
-[A] //Meet true iterate
->>>>>>> origin/master
-[0 to 3] // 0 false 1 false 2 false 3 true
-{ [A] }( y.y.add) //loop a times within conditional []
-Y.6 F.{ [ 0 to 3 ] }(y.(y).sqare) //F= 2,821,109,907,456
-```
-### FIBBO
-```
-//Fibbonachi
-<<<<<<< HEAD
-In fibbonachi(length).construct(
-start.0,c,next, second.1,
-{ [0 to length] }(
-{c lessthan 1 }(next.c);().construct(
-next.(first second).add
-first equal second
-second equal next)
+In run._(
+    sum.0, [i.(0 to 1000)](
+        {i%3 == 0 || i % 5 == 0}
+            sum += i
+    )
+    ret sum
 )
+```
+###### Each new term in the Fibonacci sequence is generated by adding the previous two terms. By starting with 1 and 2, the first 10 terms will be: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-=======
-In fibbonachi(length).construct(
-start.0,c,next, second.1,
-{ [0 to length] }(
-{c lessthan 1 }(next.c);().construct(
-next.(first second).add
-first equal second
-second equal next) )
->>>>>>> origin/master
-Fibresult.(6).fibboonachi
 ```
-### THEORY
-
-A preface to the theory, everything in this language is built on returning the object to the parent. So when you put multiple operaters between a , and a ``` ```, the operators dont matter and will be executed from back to the front. This also comes into postfix view of code operators, while math operands will still work the way they are designed to. Not many languages exist soley to move around parents and children and tag functions like this language. But one of the challenges and difficulties that we may face is the problem of memory management and how to allocate spaces for each function and returning objects. Objects still probably need more memory allocation before they are created and the language may supposedly take up more memory at runtime.
-
-Some theory:``` () ```code resides in this automatically  ( Everything is automatically enclosed in this and this dignifies a pointer of sorts. When something is called between () it points at the location of the thing that is called instead of bringing that here. (Instance.))
-```{} Returns object
-; Applies to previous object```
-Here is what I have so far:
+In run._(
+    sum.0,
+    x.1,              // Represents the current Fibonacci number being processed
+    y.2,              // Represents the next Fibonacci numbe rin the sequence
+    [x <= 4000000](
+        {x%2 == 0}(
+            sum += x,
+            z.(x+y),
+            x = y,
+            y = z
+        )
+    ret sum
+    )
+)
 ```
-{ condtional } ( true statement ) ;().construct( falsestatement)
-<<<<<<< HEAD
-^^ if else
-yeah needs work
-so every variable is an object
-if its too confusing
-then just remember this
-it eliminates typecasting
-not like javascript
-that has typecasting
-but like Y.(HELLO WORLD) // y's (hello world) is of type value
-and Y.(8) would still exist as a property of Y
-sort of like everything is a tree
-to declare a variable
-=======
-```
-That is an  If Else statement and it definetly needs some work. Every variable found in it is an object. If its too confusing then just remember this it eliminates typecasting not like javascript that has typecasting
-but like
-```Y.(HELLO WORLD) // y's (hello world)``` is of type value and ```Y.(8)``` would still exist as a property of ```Y``` sort of like everything is a tree to declare a variable
-```
->>>>>>> origin/master
-Y.(6) //y is set to 6
-```
-but if you add a contstructor
-```
-Y.(6).square // the .square returns (36) to the 6 property of Y
-```
-Everything binds to each other and can be used independantly
-
-Which would make this ```Y.(6).constructor returns .square``` applicable.
-
-to declare functions you use in  //input
-```
-{ conditional }
-<<<<<<< HEAD
-[ from one number to another ( its a loop ) ]
-another thing is that the code can be written psuedo-english but still be back into a codable sort
-ex. Y.(8).square   // Y of (8) of square constructor
-the purpose of this programming language is to bind other languages together
-the other purpose is to add interoperability to oop parents and children
-=======
->>>>>>> origin/master
-
-[ from one number to another ( its a loop ) ]
-```
-Another thing is that the code can be written psuedo-english but still be back into a codable sort
-```
-ex. Y.(8).square   // ``` Y of (8) of square constructor
-```
-### Other Purposes
-The purpose of this programming language is to bind other programming languages together. The other purpose of this language is to add interoperability to OOP and children using returned objects.
-```after writing all of that i realized that constructors are still enclosed in () so it would interfere with order of ops```
-And then theres the problem with javascript that i intend to fix   
-1. javascript cant compute big numbers
-2. javascript confuses async and sync
-<<<<<<< HEAD
-whatever
-here is how functions would be declared
-parent.(anything inside these is returned to the parent)
-so
-for functions
-in randomFunctionName( a, b).construct(a + b )
-it returns a + b to randomFunctionName method
-so
-Y.(7,6).randomFunctionName //13
-and it would translate as
-Variable Y of (7 6) of method randomFunctionName
-so yeah
-how do you want to get started on the language
-and lets put it on git so we could have as much supporters as we can
-=======
-
-Here is how functions would be declared
-```parent.(anything inside these is returned to the parent)```
-so for functions:
-```in randomFunctionName( a, b).construct(a + b )```
-it returns ```a + b``` to randomFunctionName method
-```
-Y.(7,6).randomFunctionName //13
-```
-### Transliteration
-And it would transliterate as
-Variable Y of (7 6) of method randomFunctionName
-
-The purpose of transliteration to english is the purpose of coffeescript to javascript. You can code really highlevel stuff while in psuedo-english whereas you can dig deeper into the code with real symbols and code. The point of this is to intstantiate an easier way to read a language and debug it ( even for the compiler) with a psuedo-english frontface. Another example of tranliteration for the language would be
-```
-. = Of
- _ = to
- , = Chain (useless)( don't really need it unless it's useful) ( )
- {} = Conditional
- = = Equal  
- ; = ApplyX.(2,3).add //x=5  
-```
-this right here. These codes translate to psuedo-english and will definetly help with using and understanding the language.
-
-![](https://img.clipartfest.com/e69c9ee61e517b2d787996e40068fa5a_gallup-report-finds-coding-to-coding_600-399.jpeg)
-```
-and lets put it on git so we could have as much supporters as we can
-```
->>>>>>> origin/master

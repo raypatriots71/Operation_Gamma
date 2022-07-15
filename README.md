@@ -1,3 +1,4 @@
+
 # Operation_Gamma
 
 #### **Futile efforts to build a programming language in which everything is returnable**
@@ -84,8 +85,8 @@ x.1 is the declarative of the first property of x
 ##### Variable Name Declaration
 ```
 x.foo.1 <- x's variable foo maintains the value of 1
-x.(foo) auto defaults to string
-x.("foo") is still a string
+x.(foo) auto defaults to variable
+x.("foo") is a string
 x.foo is not a string
 x."foo" will still be a string
 
@@ -95,11 +96,16 @@ del removes a variable from memory
     - usage del xx
 ```
 ##### Function Usage
+-> Sends most recent node into function downwards, then up. 
 ```
-X.(2,3).add //x=5  
-In add(a,b).construct( a + b) //declaring an add function, as shown used above
-In square(a).construct( a*a)
-In mult( a b).construct(a*b)  
+// Function Usage
+In add(a,b)._( a + b) //declaring an add function, as shown used above
+In square(a)._( a*a)
+In mult( a, b )._(a*b)  
+
+X.(2,3)-> add // X=5
+
+
 ```
 ### Example Code
 ###### If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.

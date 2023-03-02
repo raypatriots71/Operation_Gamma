@@ -1,23 +1,35 @@
 
-# Operation_Gamma
+
+# 👋 Welcome to Operation_Gamma 👋
 
 #### **Futile efforts to build a programming language in which everything is returnable**
 [O_G] Programming Language, version 0.01
 > I'll just let others write this up, im lazy ***- Rohan***
 ### Contributors
-*  raypatriots71 - Rohan Ray
-*  Kavar814 - Kavin M. Govindarajan
-*  mjoy0210 - Joydeep Mukherjee
-*  ACSarma - Arun C. Sarma
-*  amsraman - Aditya Sundaram
-*  amirkhanaursrk - Manav Majumdar
-*  ravitejaaechan - Raviteja Aechan
-### Purpose
+-   raypatriots71 - Rohan Ray
+-   Kavar814 - Kavin M. Govindarajan
+-   mjoy0210 - Joydeep Mukherjee
+-   ACSarma - Arun C. Sarma
+-   amsraman - Aditya Sundaram
+-   amirkhanaursrk - Manav Majumdar
+-   ravitejaaechan - Raviteja Aechan
+
+### 🤖 A programming language where everything is returnable! 🤖
+🌟 Purpose 🌟
+
+The purpose of Operation_Gamma is to bind objects together and maintain everything as an object. Everything is assumed to be returned, dynamic, and free-flowing. 🚀
+
 The world exists as an object. You are the physical existence of a prototype, with properties, and then an instance of that. You have your own methods, your own thoughts, your unique things that make you, YOU. The purpose of this programming language is to bind objects together and everything is maintained as an object. Everything is assumed to be returned, dynamic, and free-flowing.
-#### Theory
+
+#### 💻 Basic Syntax 💻
 To preface the theory, everything in this language is built on returning the object to the parent. Using multiple operators between a, and a ```,```, the operators are executed from right to left, but following math rules. This comes from the postfix view of operators, while math operands expect to work the way of classic order of operations. This language exists solley to map parents and children, and tag variables. Every line of functional code is kept within a ```()```, while anything outside after ```.``` are variable names of the objects above them. The property is then the variable. 
 
-### Basic Syntax
+-   Variables are dynamic and are always associated with objects.
+-   Functions are preceded by the `in` statement, which signifies the chaining and creation of a constructor to an object.
+-   Loops run only if they meet a conditional, which is defined as `{}`. Iterators are present inside of a conditional defined by `[]`.
+-   Every type, transport method, etc is chained together with a `.`.
+
+### Coding Basic Syntax
 ```
 /* comments */
 // inline comments
@@ -137,3 +149,10 @@ In run._(
     )
 )
 ```
+
+👨‍💻 Example Code 👨‍💻
+
+`In add(a, b)._( a + b )
+X.(2,3)-> add // X=5`
+
+🔥 Enjoy using Operation_Gamma! 🔥

@@ -1,0 +1,14 @@
+In fact(num)._(                   // Declaring the function fact
+    res.(1),
+    [num > 0](
+        res *= num,
+        num -= 1
+    )
+    ret res
+)
+
+In run._(
+    num.(5),
+    fact(num)
+)
+// Output: 120

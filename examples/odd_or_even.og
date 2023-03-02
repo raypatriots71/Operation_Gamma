@@ -1,0 +1,10 @@
+In is_even(num)._(num%2 == 0)     // Declaring the function is_even
+
+In run._(
+    num.(7),
+    is_even(num) -> {
+        (True)  (num." is even")
+        (False) (num." is odd")
+    }
+)
+// Output: "7 is odd"

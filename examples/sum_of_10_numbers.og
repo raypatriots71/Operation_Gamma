@@ -1,0 +1,9 @@
+In sum(a,b)._(a+b)     // Declaring the function sum
+
+In run._(
+    x.(0), [i.(1 to 10)](
+        x -> sum(i)
+    )
+    ret x
+)
+// Output: 55

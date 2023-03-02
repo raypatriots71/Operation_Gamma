@@ -1,0 +1,31 @@
+grammar OperationGamma;
+
+program: statement*;
+
+statement: function_declaration | conditional_statement | loop_statement | expression_statement;
+
+function_declaration: 'In' ID '.' '(' parameter_list? ')' '._(' expression ')' ;
+
+parameter_list: ID (',' ID)* ;
+
+conditional_statement: '{' expression '}' '(' expression_statement ')' '.' '(' expression_statement ')' ;
+
+loop_statement: '[' expression ']' '(' expression_statement ')' ;
+
+expression_statement: expression (',' expression)* ';' ;
+
+expression: assignment;
+
+assignment: ID '.' property ( '=' expression | operator expression )*;
+
+operator: '+' | '-' | '*' | '/' | '%' | '^';
+
+property: INT | ID | STRING;
+
+ID: [a-zA-Z_][a-zA-Z_0-9]*;
+
+INT: [0-9]+;
+
+STRING: '"' ~[\r\n"]* '"';
+
+WS: [ \t\r\n]+ -> skip;
